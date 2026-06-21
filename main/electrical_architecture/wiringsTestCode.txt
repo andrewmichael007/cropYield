@@ -36,8 +36,7 @@ void loop() {
 }
 
 
-
-****test code for light senso ****
+****test code for light sensor ****
 
 #include <Arduino.h>
 #include <Wire.h>
