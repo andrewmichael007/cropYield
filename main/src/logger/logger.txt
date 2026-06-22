@@ -1,0 +1,24 @@
+why created a logger interface ? design goal
+
+We want to write:
+
+Logger::info(
+    "System Started"
+);
+
+instead of:
+
+Serial.println(
+    "System Started"
+);
+
+Why?
+
+Because later:
+
+Serial monitor
+SD Card
+Database
+Cloud
+
+can all use the same logging interface.
