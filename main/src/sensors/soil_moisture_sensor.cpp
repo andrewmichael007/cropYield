@@ -1,7 +1,6 @@
 #include "soil_moisture_sensor.h"
 #include <Arduino.h>
 
-
 #define MOISTURE_PIN 34
 
 bool SoilMoistureSensor::begin()
@@ -18,8 +17,11 @@ int SoilMoistureSensor::readRaw()
 //calculation of the soil moisture percentage
 
 // current position in range / total range * 100
+
+//reading the percentage
 float SoilMoistureSensor::readPercentage()
 {
+    // 1. we store the value of the readRaw function in raw container
     int raw = readRaw();
 
     float percentage =
