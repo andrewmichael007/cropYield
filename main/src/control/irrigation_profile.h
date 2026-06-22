@@ -11,10 +11,12 @@
 #ifndef IRRIGATION_PROFILE_H
 #define IRRIGATION_PROFILE_H
 
+#include "irrigation_decision.h"
+
 struct IrrigationProfile
 {
+    IrrigationDecision decision;
     bool shouldIrrigate;
-
     unsigned long durationMs;
 };
 
