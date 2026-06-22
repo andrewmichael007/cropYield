@@ -9,7 +9,6 @@
 #include "bh1750_sensor.h"
 
 class SensorManager
-
 {
 public:
     bool begin();
