@@ -2,12 +2,12 @@
 #define IRRIGATION_CONTROLLER_H
 
 #include "../sensors/sensor_data.h"
-#include "irrigation_decision.h"
+#include "irrigation_profile.h"
 
 class IrrigationController
 {
 public:
-    IrrigationDecision evaluate(const SensorData& data);
+    IrrigationProfile evaluate(const SensorData& data);
 };
 
 #endif
