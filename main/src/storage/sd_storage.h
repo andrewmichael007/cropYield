@@ -15,6 +15,12 @@ public:
     bool append(
         const char* data
     );
+
+    //adding one more functionality
+    private:
+        bool createDatasetFile();
 };
 
 #endif
+
+
