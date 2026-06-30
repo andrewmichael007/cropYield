@@ -2,6 +2,7 @@
 #include <Arduino.h>
 #include "logger.h"
 
+//implementation of the info log
 void Logger::info(
     const char* message
 )
@@ -12,6 +13,7 @@ void Logger::info(
     Serial.println(message);
 }
 
+//implementation of warning log
 void Logger::warning(
     const char* message
 )
@@ -22,6 +24,7 @@ void Logger::warning(
     Serial.println(message);
 }
 
+//implementation of error log
 void Logger::error(
     const char* message
 )
@@ -31,6 +34,7 @@ void Logger::error(
     Serial.println(message);
 }
 
+//implementation of state log
 void Logger::state(
     const char* message
 )
