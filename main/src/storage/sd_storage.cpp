@@ -1,3 +1,33 @@
+#include "sd_storage.h"
+
+#include <Arduino.h>
+#include <SPI.h>
+#include <SD.h>
+
+#define SD_CS_PIN 5
+
+bool SDStorage::begin()
+{
+    if (!SD.begin(SD_CS_PIN))
+    {
+        return false;
+    }
+
+    return createDatasetFile();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //main implementation of the sd card storage
 #include "sd_storage.h"
 
