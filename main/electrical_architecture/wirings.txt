@@ -82,3 +82,17 @@ VCC -> 5V
 GND -> GND
 
 IN -> GPIO26
+
+
+5. WIRING OF THE SD CARD MODULE
+
+
+******CONNECTIONS*****
+SD Module      ESP32
+
+VCC      ->    3.3V
+GND      ->    GND
+MISO     ->    GPIO19
+MOSI     ->    GPIO23
+SCK      ->    GPIO18
+CS       ->    GPIO5
