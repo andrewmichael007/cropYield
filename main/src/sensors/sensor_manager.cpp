@@ -5,8 +5,9 @@
 bool SensorManager::begin()
 {
     dht22Sensor.begin();
-    SoilMoistureSensor.begin();
-    bh1750Sensor.begin();
+    soilMoistureSensor.begin();
+    // bh1750Sensor.begin();
+    tsl2561Sensor.begin();
 
     return true;
 }
@@ -25,9 +26,9 @@ SensorData SensorManager::getSensorData()
 
     data.humidity = dht22Sensor.readHumidity();
 
-    data.soilMoisture = SoilMoistureSensor.readPercentage();
+    data.soilMoisture = soilMoistureSensor.readPercentage();
 
-    data.lightIntensity = bh1750Sensor.readLux();
+    data.lightIntensity = tsl2561Sensor.readLux();
 
     data.timestamp = millis();
 
