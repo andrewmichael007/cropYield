@@ -1,7 +1,7 @@
 #include "soil_moisture_sensor.h"
 #include <Arduino.h>
 
-#define MOISTURE_PIN 34
+#define MOISTURE_PIN 32
 
 bool SoilMoistureSensor::begin()
 {
