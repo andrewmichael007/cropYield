@@ -4,14 +4,15 @@
 // creating a blueprint for soil moisture sensor basically what the soil moisture can do
 class SoilMoistureSensor
 {
-public:
+public: 
     bool begin();
     int readRaw();
     float readPercentage();
 
+// these are real calculated  readings of the capacitive soil moisture sensor
 private:
-    const int dryValue = 3500;
-    const int wetValue = 1500;
+    const int dryValue = 2560;
+    const int wetValue = 1140;
 };
 
 #endif
