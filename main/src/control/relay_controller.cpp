@@ -1,4 +1,6 @@
 //this source file shows how the actions of the relay controller would be carried out
+// this is an active low relay after unit experimentation
+
 #include <Arduino.h>
 #include "relay_controller.h"
 
@@ -6,6 +8,7 @@
 #define PUMP_RELAY_PIN 26
 #define VALVE_RELAY_PIN 27
 
+// this is an active low relay after unit experimentation
 
 bool RelayController::begin()
 {
@@ -19,14 +22,14 @@ bool RelayController::begin()
 
 void RelayController::startIrrigation()
 {
-    digitalWrite(PUMP_RELAY_PIN, HIGH);
-    digitalWrite(VALVE_RELAY_PIN, HIGH);
+    digitalWrite(PUMP_RELAY_PIN, LOW);
+    digitalWrite(VALVE_RELAY_PIN, LOW);
 }
 
 void RelayController::stopIrrigation()
 {
-    digitalWrite(PUMP_RELAY_PIN, LOW);
-    digitalWrite(VALVE_RELAY_PIN, LOW);
+    digitalWrite(PUMP_RELAY_PIN, HIGH);
+    digitalWrite(VALVE_RELAY_PIN, HIGH);
 }
 
 //note: check the relays
